@@ -20,7 +20,10 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_EMMA_COVERAGE_FILTER := *,-com.android.common.*
 
 # We need the sound recorder for the Media Capture API.
+# Box platform do not need the sound recorder
+ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 LOCAL_REQUIRED_MODULES := SoundRecorder
+endif
 
 include $(BUILD_PACKAGE)
 
