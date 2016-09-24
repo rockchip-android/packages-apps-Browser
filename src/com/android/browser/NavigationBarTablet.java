@@ -109,6 +109,7 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
         mSearchButton.setOnClickListener(this);
         mClearButton.setOnClickListener(this);
         mVoiceButton.setOnClickListener(this);
+        mUrlInput.setOnClickListener(this);
         mUrlInput.setContainer(mUrlContainer);
         mUrlInput.setStateListener(this);
     }
@@ -181,6 +182,8 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
             clearOrClose();
         } else if (mVoiceButton == v) {
             mUiController.startVoiceRecognizer();
+        } else if (mUrlInput == v) {
+            mBaseUi.editUrl(false, true);
         } else {
             super.onClick(v);
         }
