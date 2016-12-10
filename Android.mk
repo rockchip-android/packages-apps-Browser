@@ -13,6 +13,7 @@ LOCAL_SRC_FILES := \
         $(call all-java-files-under, src) \
         src/com/android/browser/EventLogTags.logtags
 
+LOCAL_OVERRIDES_PACKAGES := Browser2
 LOCAL_PACKAGE_NAME := Browser
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
