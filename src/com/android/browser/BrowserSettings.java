@@ -279,6 +279,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
      * These cannot change, so we only need to set them once per WebSettings
      */
     private void syncStaticSettings(WebSettings settings) {
+        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         settings.setDefaultFontSize(16);
         settings.setDefaultFixedFontSize(13);
 
